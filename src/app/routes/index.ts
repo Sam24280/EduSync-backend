@@ -15,6 +15,7 @@ import { UserRoutes } from '../modules/User/user.route';
 import { ClassRoomRoutes } from '../modules/ClassRoom/room.route';
 import { ClassScheduleRoutes } from '../modules/ClassSchedule/schedule.route';
 import { AttendanceRoutes } from '../modules/Attendance/attendance.route';
+import { MaterialsRoutes } from '../modules/courseMaterials/materials.route';
 
 const router = Router();
 
@@ -78,6 +79,10 @@ const moduleRoutes = [
   {
     path: '/attendance',
     route: AttendanceRoutes,
+  },
+  {
+    path: '/course-materials',
+    route: MaterialsRoutes,
   },
 ];
 
