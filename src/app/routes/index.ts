@@ -16,6 +16,7 @@ import { ClassRoomRoutes } from '../modules/ClassRoom/room.route';
 import { ClassScheduleRoutes } from '../modules/ClassSchedule/schedule.route';
 import { AttendanceRoutes } from '../modules/Attendance/attendance.route';
 import { MaterialsRoutes } from '../modules/courseMaterials/materials.route';
+import { DiscussionRoutes } from '../modules/Discussion/discussion.route';
 
 const router = Router();
 
@@ -83,6 +84,10 @@ const moduleRoutes = [
   {
     path: '/course-materials',
     route: MaterialsRoutes,
+  },
+  {
+    path: '/discussions',
+    route: DiscussionRoutes,
   },
 ];
 
