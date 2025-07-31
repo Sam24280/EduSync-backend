@@ -30,7 +30,8 @@ const createDiscussion = catchAsync(async (req, res) => {
 const updateDiscussion = catchAsync(async (req, res) => {
     const { id } = req.params;
     const updateData = req.body;
-    const result = await DiscussionService.updateDiscussion(id, updateData);
+    const user = req.user;
+    const result = await DiscussionService.updateDiscussion(id, req?.file, updateData, user);
     sendResponse(res, {
         statusCode: httpStatus.OK,
         success: true,
@@ -41,7 +42,8 @@ const updateDiscussion = catchAsync(async (req, res) => {
 
 const deleteDiscussion = catchAsync(async (req, res) => {
     const { id } = req.params;
-    const result = await DiscussionService.deleteDiscussion(id);
+    const user = req.user;
+    const result = await DiscussionService.deleteDiscussion(id, user);
     sendResponse(res, {
         statusCode: httpStatus.OK,
         success: true,
