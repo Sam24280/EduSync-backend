@@ -1,5 +1,5 @@
 import httpStatus from 'http-status';
-import { Schema, model } from 'mongoose';
+import mongoose, { Schema, model } from 'mongoose';
 import AppError from '../../errors/AppError';
 import { TAcademicDepartment } from './academicDepartment.interface';
 
@@ -11,7 +11,8 @@ const academicDepartmentSchema = new Schema<TAcademicDepartment>(
       unique: true,
     },
     academicFaculty: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'AcademicFaculty',
       required: true,
     },
   },

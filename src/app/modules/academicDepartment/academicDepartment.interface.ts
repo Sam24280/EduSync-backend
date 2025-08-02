@@ -1,4 +1,6 @@
+import { Types } from 'mongoose';
+
 export type TAcademicDepartment = {
   name: string;
-  academicFaculty: string;
+  academicFaculty: Types.ObjectId;
 };
