@@ -12,8 +12,8 @@ async function main() {
     );
 
     seedSuperAdmin();
-    server = app.listen(5000, () => {
-      console.log(`app is listening on port ${5000}`);
+    server = app.listen(5001, () => {
+      console.log(`app is listening on port ${5001}`);
     });
   } catch (err) {
     console.log(err);
